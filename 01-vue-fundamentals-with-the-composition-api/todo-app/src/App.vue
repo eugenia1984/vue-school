@@ -12,8 +12,8 @@
 <template>
   <h1>{{ header }}</h1>
   <ul>
-    <li v-for="item in items" :key="item.id">
-      {{ item.label }}
+    <li v-for="{id, label} in items" :key="id">
+      {{ label }}
     </li>
   </ul>
 </template>
