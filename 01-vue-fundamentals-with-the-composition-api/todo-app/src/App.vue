@@ -9,12 +9,21 @@
   ]);
   const newItem = ref('');
   const newItemHighPriority = ref(false);
+  const saveItem = () => {
+    items.value.push({ id: items.value.length + 1 ,label: newItem.value });
+    newItem.value = '';
+  }
 </script>
 
 <template>
   <h1>{{ header }}</h1>
-  <div class="flex">
-    <input v-model.trim="newItem" type="text" placeholder="Add a ToDo item here..." class="todo-list-item-input"/>
+  <form class="flex" @submit.prevent="saveItem">
+    <input 
+      v-model.trim="newItem" 
+      type="text" 
+      placeholder="Add a ToDo item here..." 
+      class="todo-list-item-input"
+    />
     <span class="priority-span">Priority:</span>
     <label>
       <input type="checkbox" v-model="newItemHighPriority" />
@@ -22,14 +31,11 @@
     </label>
     <br />
     <br />
-    <button 
-      v-on:click="items.push({id: items.length + 1 ,label: newItem})" 
-      class="btn btn-primary" 
-    >
+    <button class="btn btn-primary">
       Save item
     </button>
     <br />
-  </div>
+  </form>
   <ul>
     <li v-for="{id, label} in items" :key="id"> 
       {{ label }}
