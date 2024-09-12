@@ -4,9 +4,9 @@
   const header = ref('ToDo App');
   const editing = ref(false);
   const items = ref([
-    // {id: 1, label: "Read"},
-    // {id: 2, label:"Go out for a walk"},
-    // {id: 3, label: "Dance"}
+    { id: 1, label: "Read", isDone: true, highPriority: false },
+    { id: 2, label:"Go out for a walk", isDone: false, highPriority: true},
+    { id: 3, label: "Dance", isDone: true, highPriority: false }
   ]);
   const newItem = ref('');
   const newItemHighPriority = ref(false);
@@ -51,7 +51,11 @@
     <br />
   </form>
   <ul>
-    <li v-for="{id, label} in items" :key="id"> 
+    <li 
+      v-for="{id, label, isDone, highPriority} in items" 
+      :key="id"
+      :class="{strikeout: isDone, priority: highPriority}"
+    > 
       {{ label }}
     </li>
   </ul>
