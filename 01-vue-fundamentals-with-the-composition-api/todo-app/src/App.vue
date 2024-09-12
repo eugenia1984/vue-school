@@ -2,10 +2,11 @@
   import { ref } from 'vue';
 
   const header = ref('ToDo App');
+  const editing = ref(false);
   const items = ref([
-    {id: 1, label: "Read"},
-    {id: 2, label:"Go out for a walk"},
-    {id: 3, label: "Dance"}
+    // {id: 1, label: "Read"},
+    // {id: 2, label:"Go out for a walk"},
+    // {id: 3, label: "Dance"}
   ]);
   const newItem = ref('');
   const newItemHighPriority = ref(false);
@@ -13,24 +14,34 @@
     items.value.push({ id: items.value.length + 1 ,label: newItem.value });
     newItem.value = '';
   }
+  const doEdit = (e) => {
+    editing.value = e;
+    newItem.value = '';
+  }
 </script>
 
 <template>
-  <h1>{{ header }}</h1>
-  <form class="flex" @submit.prevent="saveItem">
+  <div class="header">
+    <h1>{{ header }}</h1>
+    <button v-if="editing" class="btn btn-cancel" @click="doEdit(false)">Cancel</button>
+    <button v-else class="btn btn-primary" @click="doEdit(true)">Add todo</button>
+  </div>
+  <form 
+    class="add-item-form" 
+    @submit.prevent="saveItem"
+    v-if="editing"
+  >
     <input 
       v-model.trim="newItem" 
       type="text" 
       placeholder="Add a ToDo item here..." 
       class="todo-list-item-input"
     />
-    <span class="priority-span">Priority:</span>
     <label>
+      <span class="priority-span">Priority:</span>
       <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
-    <br />
-    <br />
     <button class="btn btn-primary">
       Save item
     </button>
@@ -41,5 +52,8 @@
       {{ label }}
     </li>
   </ul>
+  <p v-if="!items.length">
+    Nothing to do yet.
+  </p>
 </template>
 
