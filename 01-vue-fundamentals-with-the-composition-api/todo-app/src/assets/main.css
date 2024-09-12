@@ -2,8 +2,19 @@ body {
   background: #eff8ff;
   height: 100vh;
   width: 100vw;
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    system-ui,
+    BlinkMacSystemFont,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +33,9 @@ body {
   padding: 2rem;
   margin: 1rem;
   border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px 0 rgba(0, 0, 0, 0.08);
   width: 95%;
   max-width: 900px;
 }
@@ -153,8 +166,14 @@ li input {
 .priority {
   color: #de751f;
 }
-input[type="checkbox"]{
+
+input[type='checkbox'] {
   display: inline !important;
   box-shadow: none;
   width: auto;
+}
+
+.todo-list-item-input {
+  padding: 6px 8px;
+  min-width: 250px;
 }
