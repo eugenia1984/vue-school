@@ -17,7 +17,13 @@ Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/
 - Attribute Bindings and dynamic classes
 ```
 
-2. **Vue Fundamentals API composition**
+2. **Vue Fundamentals API composition**:
+
+- `v-bind`(`:`)
+
+- directives: `v-if`, `v-else-if`, `v-else`, `v-show`, `v-for`.
+
+- events
 
 ---
 

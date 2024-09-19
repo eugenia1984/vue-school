@@ -17,6 +17,31 @@
     <p v-else-if="iAm18 === 18">I'm 18.</p>
     <p v-else>I'm younger than 18.</p>
   </div>
+  <hr />
+  <div>
+    <h2>v-show</h2>
+    <p v-show="isActive">I'm active with v-show</p>
+  </div>
+  <hr />
+  <div>
+    <h2>v-for</h2>
+    <ul>
+      <li v-for="station in stations" :key="station">{{ station }}</li>
+    </ul>
+    <span>Fruits</span>
+    <ul>
+      <li v-for="{name, price, description} in fruitArr" :key="name">
+        {{ `EUR ${price} - ${name} (${description})` }}
+      </li>
+    </ul>
+    <span>v-for with object</span>
+    <ul>
+      <li v-for="(value, propiedad, index) in appleObj" :key="value">
+        {{ `${index} - ${propiedad} - ${value}` }}
+      </li>
+    </ul>
+  </div>
+  <hr /> 
 </template>
 
 <script setup>
@@ -25,6 +50,24 @@ const colorBlue = "color: blue";
 const isActive = true; 
 const isOlder = false;
 const iAm18 = 18;
+const stations = ['Summer', 'Autumn', 'Winter', 'Spring'];
+const fruitArr = [
+  {
+    name: "Apple",
+    price: "1.20",
+    description: "1kg of apples"
+  },
+  {
+    name: "Banana",
+    price: "1.60",
+    description: "1kg of bananas"
+  }
+];
+const appleObj = {
+  name: "Apple",
+  price: "1.20",
+  description: "1kg of apples"
+}
 </script>
 
 <style>

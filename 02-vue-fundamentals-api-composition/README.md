@@ -1,5 +1,13 @@
 # 02 VUE Fundamentals - API Composition
 
+## Thing I'd practice:
+
+- `v-bind`(`:`)
+
+- directives: `v-if`, `v-else-if`, `v-else`, `v-show`, `v-for`.
+
+- events
+
 ---
 
 ## Project Setup
