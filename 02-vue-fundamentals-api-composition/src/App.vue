@@ -41,6 +41,11 @@
       </li>
     </ul>
   </div>
+  <hr />
+  <div>
+    <h2>v-on (@click)</h2>
+    <button @click="handleClick">Click me</button>
+  </div>
   <hr /> 
 </template>
 
@@ -68,6 +73,8 @@ const appleObj = {
   price: "1.20",
   description: "1kg of apples"
 }
+// Methods
+const handleClick = () => alert('You click me')
 </script>
 
 <style>
