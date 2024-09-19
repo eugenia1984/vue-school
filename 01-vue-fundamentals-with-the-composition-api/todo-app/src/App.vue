@@ -54,7 +54,11 @@
     <li 
       v-for="{id, label, isDone, highPriority} in items" 
       :key="id"
-      :class="{strikeout: isDone, priority: highPriority}"
+      class="static-class"
+      :class="{
+        strikeout: isDone, 
+        priority: highPriority
+      }"
     > 
       {{ label }}
     </li>
