@@ -1,9 +1,11 @@
 <template>
-  <h1>Hi {{ name.toUpperCase() }}</h1>
-  <hr />
-  <h2 :style="colorBlue">I'm blue</h2>
-  <hr/>
-  <p>{{ isActive ? 'I am active' : 'I am inactive' }}</p>
+  <div>
+    <h1>Hi {{ name.toUpperCase() }}</h1>
+    <hr />
+    <h2 :style="colorBlue">I'm blue</h2>
+    <hr/>
+    <p>{{ isActive ? 'I am active' : 'I am inactive' }}</p>
+  </div>
   <hr />
   <div>
     <h2>v-if & v-else</h2>
@@ -46,11 +48,19 @@
     <h2>v-on (@click)</h2>
     <button @click="handleClick">Click me</button>
     <button @click="handleClickWithDynamicText('You click me, with dynamic text')">Click me</button>
+    <hr />
+    <h2>ref()</h2>
+    <button @click="decrement">- </button>
+    <span class="counter-value" :class="counter > 10 ? 'max-ten': ''"> {{ counter }}</span>
+    <button @click="increment">+ </button>
+    <button @click="reset">Reset</button>
   </div>
   <hr /> 
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 const name = "Eugenia";
 const colorBlue = "color: blue";
 const isActive = true; 
@@ -74,9 +84,18 @@ const appleObj = {
   price: "1.20",
   description: "1kg of apples"
 }
+// Reactivity
+const counter = ref(0);
 // Methods
 const handleClick = () => alert('You click me')
 const handleClickWithDynamicText = (message) => alert(message)
+const increment = () => counter.value ++;
+const decrement = () => {
+  if(counter.value > 0) {
+    counter.value--;
+  }
+}
+const reset = () => counter.value = 0;
 </script>
 
 <style>
@@ -86,5 +105,14 @@ h1 {
 
 button {
   margin: 10px;
+}
+
+.counter-value {
+  margin: 10px;
+  font-weight: 800;
+}
+
+.max-ten {
+  color: green;
 }
 </style>
