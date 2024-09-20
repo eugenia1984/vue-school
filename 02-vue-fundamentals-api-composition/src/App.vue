@@ -49,9 +49,9 @@
     <button @click="handleClick">Click me</button>
     <button @click="handleClickWithDynamicText('You click me, with dynamic text')">Click me</button>
     <hr />
-    <h2>ref()</h2>
+    <h2>ref() y computed</h2>
     <button @click="decrement">- </button>
-    <span class="counter-value" :class="counter > 10 ? 'max-ten': ''"> {{ counter }}</span>
+    <span class="counter-value" :class="classCounter"> {{ counter }}</span>
     <button @click="increment">+ </button>
     <button @click="reset">Reset</button>
   </div>
@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const name = "Eugenia";
 const colorBlue = "color: blue";
@@ -85,7 +85,7 @@ const appleObj = {
   description: "1kg of apples"
 }
 // Reactivity
-const counter = ref(0);
+const counter = ref(10);
 // Methods
 const handleClick = () => alert('You click me')
 const handleClickWithDynamicText = (message) => alert(message)
@@ -95,7 +95,15 @@ const decrement = () => {
     counter.value--;
   }
 }
-const reset = () => counter.value = 0;
+const reset = () => counter.value = 10;
+// Computed
+const classCounter = computed( () => {
+  if(counter.value === 10 ) return 'ten';
+
+  if(counter.value > 10 ) return 'max-ten';
+  
+  if(counter.value < 10)  return 'less-ten';
+})
 </script>
 
 <style>
@@ -114,5 +122,13 @@ button {
 
 .max-ten {
   color: green;
+}
+
+.ten {
+  color: blue;
+}
+
+.less-ten {
+  color: red;
 }
 </style>
