@@ -45,6 +45,7 @@
   <div>
     <h2>v-on (@click)</h2>
     <button @click="handleClick">Click me</button>
+    <button @click="handleClickWithDynamicText('You click me, with dynamic text')">Click me</button>
   </div>
   <hr /> 
 </template>
@@ -75,10 +76,15 @@ const appleObj = {
 }
 // Methods
 const handleClick = () => alert('You click me')
+const handleClickWithDynamicText = (message) => alert(message)
 </script>
 
 <style>
 h1 {
   color: red;
+}
+
+button {
+  margin: 10px;
 }
 </style>
