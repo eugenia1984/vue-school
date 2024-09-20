@@ -53,7 +53,15 @@
     <button @click="decrement">- </button>
     <span class="counter-value" :class="classCounter"> {{ counter }}</span>
     <button @click="increment">+ </button>
+    <br />
     <button @click="reset">Reset</button>
+    <button @click="addToFavorites" :disabled="checkIfIsInFavorites">Add to favorites</button>
+    <p>Favorites:</p>
+    <ul>
+      <li v-for="favorite in favoritesArr" :key="favorite"> 
+        {{ favorite }}
+      </li>
+    </ul>
   </div>
   <hr /> 
 </template>
@@ -86,6 +94,7 @@ const appleObj = {
 }
 // Reactivity
 const counter = ref(10);
+const favoritesArr = ref([]);
 // Methods
 const handleClick = () => alert('You click me')
 const handleClickWithDynamicText = (message) => alert(message)
@@ -103,6 +112,16 @@ const classCounter = computed( () => {
   if(counter.value > 10 ) return 'max-ten';
   
   if(counter.value < 10)  return 'less-ten';
+})
+const addToFavorites = computed(() => {
+  favoritesArr.value.push(counter.value);
+})
+const checkIfIsInFavorites = computed(() => {
+  const numberToSearch = favoritesArr.value.find( el => el === counter.value);
+
+  if(numberToSearch === 0 ) return true;
+  
+  return numberToSearch ? true : false;
 })
 </script>
 
