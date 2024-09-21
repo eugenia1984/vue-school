@@ -25,6 +25,8 @@ Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/
 
 - events
 
+3. **Vue Pokemon**: using axios and Pinia to manage data in a Pokemon game.
+
 ---
 
 ## TECHNOLOGIES:
@@ -35,7 +37,13 @@ Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/
 
 - JavaScript
 
+- axios
+
+- Pinia
+
 - VUE.js
+
+- Git
 
 ---
 

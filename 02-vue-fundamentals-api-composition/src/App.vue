@@ -119,9 +119,7 @@ const addToFavorites = computed(() => {
 const checkIfIsInFavorites = computed(() => {
   const numberToSearch = favoritesArr.value.find( el => el === counter.value);
 
-  if(numberToSearch === 0 ) return true;
-  
-  return numberToSearch ? true : false;
+  return (numberToSearch === 0 || numberToSearch) ? true : false;
 })
 </script>
 
