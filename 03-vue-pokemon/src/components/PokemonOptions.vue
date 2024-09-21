@@ -10,20 +10,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    pokemons: {
-      type: Array,
-      required: true
-    }
-  },
-  methods: {
-    hola(){
-      // this.$emit()
-    }
-  }
-}
+<script setup lang="ts">
+import { Pokemon } from "../interfaces/pokemon";
+defineProps<(
+  pokemons: Pokemon[]
+)>()
+// export default {
+//  props: {
+//    pokemons: {
+//      type: Array,
+//      required: true
+//    }
+//  },
+//  methods: {
+//    hola(){
+//      // this.$emit()
+//    }
+//  }
+// }
 </script>
 
 <style scoped>
