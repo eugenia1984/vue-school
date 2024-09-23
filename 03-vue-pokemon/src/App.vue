@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import PokemonPage from './pages/PokemonPage'
+import PokemonPage from './pages/PokemonPage.vue';
 
 // export default {
 //  name: 'App',
@@ -10,12 +10,7 @@
 </script>
 
 <template>
-  <!-- <PokemonPage /> -->
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-  </div>
+  <PokemonPage /> 
 </template>
 
 <style>
