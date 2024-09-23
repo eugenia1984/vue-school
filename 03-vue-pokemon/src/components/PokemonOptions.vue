@@ -12,9 +12,9 @@
 
 <script setup lang="ts">
 import { Pokemon } from "../interfaces/pokemon";
-defineProps<(
+defineProps<{
   pokemons: Pokemon[]
-)>()
+}>()
 // export default {
 //  props: {
 //    pokemons: {
@@ -42,11 +42,9 @@ li {
     margin-bottom: 10px;
     width: 250px;
 }
-
 li:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
-
 .options-container {
     display: flex;
     justify-content: center;

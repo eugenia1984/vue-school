@@ -29,7 +29,6 @@ const getPokemonNames = async (pokemons: number[]): Promise<Pokemon[]> => {
 
 const getPokemonOptions = async () => {
   const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5);
-
   const pokemons = await getPokemonNames(mixedPokemons.splice(0, 4));
 
   return pokemons;
