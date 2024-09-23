@@ -19,7 +19,7 @@ const props = defineProps<{
     showPokemon: boolean
 }>();
 
-const imageSrc = computed(() => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${props.pokemonId }.svg`)
+const imgSrc = computed(() => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${props.pokemonId }.svg`)
 
 // export default {
 //    props: {
