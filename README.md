@@ -25,7 +25,11 @@ Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/
 
 - events
 
-3. **Vue Pokemon**: using axios, TypeScript and Composition API to manage data in a Pokemon game.
+3. **Vue Pokemon**: using axios, TypeScript and Composition API to manage data in a Pokemon game. You have 4 options and need to guess the Pokemon name.
+
+![image](https://github.com/user-attachments/assets/94cab2fb-fee5-40fa-91a2-6442ac126ea3)
+
+![image](https://github.com/user-attachments/assets/d125da55-455b-4a56-b513-153ce98b88e9)
 
 ---
 
