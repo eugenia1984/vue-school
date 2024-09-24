@@ -1,6 +1,6 @@
 # VUE SCHOOL
 
-Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/courses/)
+Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/courses/) and some videos of **Fernando Herrera**.
 
 ## What you can find?
 
@@ -25,7 +25,7 @@ Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/
 
 - events
 
-3. **Vue Pokemon**: using axios and Pinia to manage data in a Pokemon game.
+3. **Vue Pokemon**: using axios, TypeScript and Composition API to manage data in a Pokemon game.
 
 ---
 
