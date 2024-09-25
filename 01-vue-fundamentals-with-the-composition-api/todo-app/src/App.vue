@@ -10,13 +10,25 @@
   ]);
   const newItem = ref('');
   const newItemHighPriority = ref(false);
+
   const saveItem = () => {
-    items.value.push({ id: items.value.length + 1 ,label: newItem.value });
+    items.value.push({ 
+      id: items.value.length + 1,
+      label: newItem.value,
+      highPriority:  newItemHighPriority.value
+    });
+    // Reset values
     newItem.value = '';
+    newItemHighPriority.value='';
   }
+
   const doEdit = (e) => {
     editing.value = e;
     newItem.value = '';
+  }
+  
+  const toggleTodo = (item) => {
+    item.isDone = !item.isDone
   }
 </script>
 
@@ -51,7 +63,7 @@
     <br />
   </form>
   <ul>
-    <li 
+    <!-- <li 
       v-for="{id, label, isDone, highPriority} in items" 
       :key="id"
       class="static-class"
@@ -59,6 +71,18 @@
         strikeout: isDone, 
         priority: highPriority
       }"
+    > 
+      {{ label }}
+    </li> -->
+    <li 
+      v-for="({id, label, isDone, highPriority}, index) in items" 
+      @click="toggleTodo(items[index])"
+      :key="id"
+      class="static-class"
+      :class="[
+        isDone ? 'strikeout text-gray' : 'underlined',
+        highPriority ? 'priority': ''
+      ]"
     > 
       {{ label }}
     </li>
