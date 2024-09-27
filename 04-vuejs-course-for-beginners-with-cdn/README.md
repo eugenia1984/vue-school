@@ -18,4 +18,7 @@ In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist
 
 - `v-show`: similar to v-if, but when it's false has: `display: none;`, so it will be rendering, just change the scc from `display: none;`.
 
+
+- `v-cloak`
+
 ---

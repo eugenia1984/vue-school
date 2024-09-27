@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.js with CDN</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/fluency/48/vuejs.png"
+      type="image/png"
+    />
   </head>
   <body>
-    <div id="app">{{ message }}</div>
-    <!--v-model -->
-    <input v-model="message" />
-    <div class="boxes">
-      <!-- v-if -->
-      <div v-if="isVisible" class="box"></div>
-      <!-- v-else-if -->
-      <div v-if="isVisible2" class="box two"></div>
-      <!-- v-else -->
-      <div v-else class="box three"></div>
+    <div id="app" v-cloak>
+      <header>
+        <h1>{{ message }}</h1>
+      </header>
+      <section>
+        <!--v-model -->
+        <input v-model="message" />
+      </section>
+      <section class="boxes">
+        <!-- v-if -->
+        <div v-if="isVisible" class="box"></div>
+        <!-- v-if -->
+        <div v-if="isVisible2" class="box two"></div>
+        <!-- v-else -->
+        <div v-else class="box three"></div>
+      </section>
     </div>
     <!-- Vuejs CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -27,7 +38,7 @@
         setup() {
           const message = ref("Hello vue!");
           const isVisible = true;
-          const isVisible2 = false;
+          const isVisible2 = true;
 
           return {
             message,

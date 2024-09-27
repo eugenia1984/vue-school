@@ -17,3 +17,7 @@
 .box.three {
   background-color: blue;
 }
+
+[v-cloak] {
+  display: none;
+}
