@@ -17,8 +17,8 @@
         <h1>{{ message }}</h1>
       </header>
       <section>
-        <!--v-model -->
-        <input v-model="message" />
+        <!--v-model ans @keyup.enter -->
+        <input v-model="message" @keyup.enter="greet" />
       </section>
       <section class="boxes">
         <!-- v-if -->
@@ -27,6 +27,9 @@
         <div v-if="isVisible2" class="box two"></div>
         <!-- v-else -->
         <div v-else class="box three"></div>
+      </section>
+      <section>
+        <button @click="toggleBox">Toggle box</button>
       </section>
     </div>
     <!-- Vuejs CDN -->
@@ -37,13 +40,19 @@
       createApp({
         setup() {
           const message = ref("Hello vue!");
-          const isVisible = true;
+          const isVisible = false;
           const isVisible2 = true;
+
+          // Methods
+          const greet = () => console.log("message.value: ",message.value)
+          const toggleBox = () => !isVisible;
 
           return {
             message,
             isVisible,
             isVisible2,
+            greet,
+            toggleBox
           };
         },
       }).mount("#app");
