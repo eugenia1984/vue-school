@@ -20,6 +20,9 @@ In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist
 
 - `v-cloak`
 
+- `v-for`: for loop like: `element in elements`, always remember to add unique **key**(like React when you `.map()`).
+
+---
 
 ## Events
 

@@ -31,6 +31,14 @@
       <section>
         <button @click="toggleBox">Toggle box</button>
       </section>
+      <!-- v-for -->
+      <section>
+        <ul>
+          <li v-for="season in seasons" :key="season">
+            {{ season }}
+          </li>
+        </ul>
+      </section>
       <!-- components -->
       <section>
         <login-form />
@@ -46,6 +54,7 @@
           const message = ref("Hello vue!");
           const isVisible = false;
           const isVisible2 = true;
+          const seasons = ref(['Summer', 'Autumn', 'Winter', 'Spring']);
 
           // Methods
           const greet = () => console.log("message.value: ",message.value)
@@ -56,7 +65,8 @@
             isVisible,
             isVisible2,
             greet,
-            toggleBox
+            toggleBox,
+            seasons
           };
         },
       })
