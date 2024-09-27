@@ -1,5 +1,19 @@
+.boxes {
+  display: flex;
+  gap: 2px;
+  margin: 1rem 0;
+}
+
 .box {
   background-color: purple;
-  height: 200px;
-  height: 200px;
+  height: 100px;
+  width: 100px;
+}
+
+.box.two {
+  background-color: red;
+}
+
+.box.three {
+  background-color: blue;
 }

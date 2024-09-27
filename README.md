@@ -35,7 +35,7 @@ Creating a to-do app to see all this concepts.
 
 ![image](https://github.com/user-attachments/assets/d125da55-455b-4a56-b513-153ce98b88e9)
 
-4. **04 - Vue.js course for Beginners with CDN** here you will find some Vue.js practice of FreeCodeCamp YouTube videos.
+4. **04 - Vue.js course for Beginners with CDN** here you will find some Vue.js practice of FreeCodeCamp YouTube videos, learning: `v directives` (`v-model`, `v-show`, `v-if`, `v-else-if`, `v-else`)
 
 ---
 

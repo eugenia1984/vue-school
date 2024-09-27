@@ -12,4 +12,10 @@ In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist
 
 - `v-if`: `v-if="condition"` if the condition it's true it's going to be render (**conditional rendering**).
 
+- `v-else-if`
+
+- `v-else`
+
+- `v-show`: similar to v-if, but when it's false has: `display: none;`, so it will be rendering, just change the scc from `display: none;`.
+
 ---
