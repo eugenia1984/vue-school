@@ -1,6 +1,6 @@
 # 02 VUE Fundamentals - API Composition
 
-## Thing I'd practice:
+## Thing I'd practiced:
 
 - `v-bind`(`:`)
 

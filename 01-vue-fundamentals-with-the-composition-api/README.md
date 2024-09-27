@@ -1,4 +1,13 @@
-# TODO APP
+# 01- Vue fundamentals with the Composition API
+
+---
+
+## TODO APP
+
+Inside `todo-app` I create a little aplication of a to-do list in order to learn Vue fundamentals with Composition API
+
+
+---
 
 ## Commands
 
