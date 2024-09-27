@@ -40,6 +40,20 @@ Have **props**, props that pass from parent component to child component are **i
 
 ---
 
+## Component LifeCycle Hook
+
+A **hook** is just a function that will be trigger to run at a specific time of the life cycle of the component.
+
+- `beforeCreate` and once it's  `created`
+
+- `beforeMount` and once it's `mounted`
+
+- `beforeUpdate` and once it's `updated`
+
+- `beforeUnmount` and once it's `unmounted`
+
+---
+
 ![image](https://github.com/user-attachments/assets/fc953cc6-0748-4f8e-8ef1-b34b10cc1027)
 
 ---
