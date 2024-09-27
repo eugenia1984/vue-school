@@ -21,3 +21,13 @@
 [v-cloak] {
   display: none;
 }
+
+/* Login form */
+.login-form {
+  padding: 1rem;
+}
+
+input {
+  margin-bottom: 16px;
+  display: block;
+}

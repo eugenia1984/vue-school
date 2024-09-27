@@ -31,13 +31,17 @@
       <section>
         <button @click="toggleBox">Toggle box</button>
       </section>
+      <!-- components -->
+      <section>
+        <login-form />
+      </section>
     </div>
     <!-- Vuejs CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
       const { createApp, ref } = Vue;
 
-      createApp({
+      let app = createApp({
         setup() {
           const message = ref("Hello vue!");
           const isVisible = false;
@@ -55,7 +59,18 @@
             toggleBox
           };
         },
-      }).mount("#app");
+      })
+
+      app.component('login-form', {
+        template: `
+          <div class="login-form">
+            <input type="email" />
+            <input type="password" />
+          </div>
+        `
+      });
+
+      app.mount("#app");
     </script>
   </body>
 </html>
