@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue.js with CDN</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div id="app">{{ message }}</div>
+  <!--v-model -->
+  <input v-model="message" />
+  <!-- v-if -->
+  <div v-if="isVisible" class="box">
+
+  </div>
   <!-- Vuejs CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+  
+    createApp({
+      setup() {
+        const message = ref('Hello vue!')
+        const isVisible = true
+
+        return {
+          message,
+          isVisible
+        }
+      }
+    }).mount('#app')
+  </script>
 </body>
 </html>

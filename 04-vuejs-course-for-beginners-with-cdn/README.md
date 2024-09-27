@@ -5,3 +5,11 @@ Here you will find some Vue.js practice of FreeCodeCamp YouTube videos.
 In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>`
 
 ---
+
+## Directives (v-*)
+
+- `v-model`: vue is **two way data binding**
+
+- `v-if`: `v-if="condition"` if the condition it's true it's going to be render (**conditional rendering**).
+
+---
