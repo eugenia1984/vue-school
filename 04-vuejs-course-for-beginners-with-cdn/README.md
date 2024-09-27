@@ -52,6 +52,16 @@ A **hook** is just a function that will be trigger to run at a specific time of 
 
 - `beforeUnmount` and once it's `unmounted`
 
+### Why use lifecycle hooks?
+
+- check if user is authorized 
+
+- `created` and `mounted` to pull data into the application from API calls or in browser storage (cookie, localStorage, Session storage)
+
+- creating or removing events
+
+- getting or cleaning up data (before `unmount` or in the `unmounted` to clean)
+
 ---
 
 ![image](https://github.com/user-attachments/assets/fc953cc6-0748-4f8e-8ef1-b34b10cc1027)

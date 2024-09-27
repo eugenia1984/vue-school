@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js | LifeCycle Methods</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/fluency/48/vuejs.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <header>
+        <h1>LifeCycle Methods in Vue.js</h1>
+      </header>
+      <section>
+        <button @click="toggleBox">Toggle box</button>
+      </section>
+      <section class="boxes">
+        <test-box v-if="isVisible" />
+      </section>
+    </div>
+    <!-- Vue. js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp, ref } = Vue;
+
+      let app = createApp({
+        data: function() {
+          return {
+            isVisible: true
+          }
+        },
+        methods: {
+          toggleBox: function() {
+            this.isVisible = !this.isVisible
+          }
+        },
+        updated() {
+          console.log('Updated from parent component')
+        }
+      })
+
+      app.component('test-box', {
+        template: `
+          <div class="box"></div>
+        `,
+        created() {
+          console.log('Created on child component')
+        },
+        mounted() {
+          console.log('Mounted on child component')
+        },
+        unmounted() {
+          console.log('Unmounted on child component')
+        }
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

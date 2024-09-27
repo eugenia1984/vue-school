@@ -37,6 +37,9 @@ Creating a to-do app to see all this concepts.
 
 4. **04 - Vue.js course for Beginners with CDN** here you will find some Vue.js practice of FreeCodeCamp YouTube videos, learning: `v directives` (`v-model`, `v-show`, `v-if`, `v-else-if`, `v-else`, `v-for`), `v-cloak`,  **events** (`@keyup.enter`), **components**, **lifecycle methods**.
 
+
+5. **05 - Food App** from the same course [Vue.js Course for Beginners ](https://www.youtube.com/watch?v=FXpIoQ_rT_c&t=6s), part 2, creating a food app
+
 ---
 
 ## TECHNOLOGIES:

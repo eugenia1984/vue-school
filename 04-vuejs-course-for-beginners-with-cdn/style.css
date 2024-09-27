@@ -31,3 +31,22 @@ input {
   margin-bottom: 16px;
   display: block;
 }
+
+/* Button */
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: gray;
+}
