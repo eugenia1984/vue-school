@@ -36,3 +36,7 @@ In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist
 Have **props**, props that pass from parent component to child component are **immutable** (the child component can't updated). 
 
 ---
+
+![image](https://github.com/user-attachments/assets/fc953cc6-0748-4f8e-8ef1-b34b10cc1027)
+
+---
