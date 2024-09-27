@@ -66,24 +66,43 @@
           <div class="login-form">
             <form @submit.prevent="handleSubmit" >
               <h2>{{ title }}</h2>
-              <label for="email">E-mail:</label>
-              <input id="email" type="email" v-model="email" required />
-              <label for="password">Password:</label>
-              <input id="password" type="password" v-model="password" required />
+              <custom-input v-model="email" :label="emailLabel" type="email" />
+              <custom-input v-model="password" :label="passwordLabel" type="password" />
               <button>Log in</button>
             </form>
           </div>
         `,
+        components: ['custom-input'],
         data() {
           return {
             title: 'Login form',
             email: '',
-            password: ''
+            password: '',
+            emailLabel: 'e-mail',
+            passwordLabel: 'password'
           }
         },
         methods: {
           handleSubmit() {
             console.log('Submitted', this.email, this.password)
+          }
+        }
+      });
+
+      app.component('custom-input', {
+        template: `
+          <label :for="label">{{ label }} :</label>
+          <input :id="label" v-model="inputValue" required />
+        `,
+        props: ['label', 'modelValue'],
+        computed: {
+          inputValue: {
+            get() {
+              return this.modelValue 
+            },
+            set(value) {
+              this.$emit('update:modelValue', value)
+            }
           }
         }
       });
