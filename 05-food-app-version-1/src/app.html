@@ -7,9 +7,7 @@
     <link rel="shortcut icon" href="../public/favicon.ico" type="image/ico">
   </head>
   <body>
-
     <div id="app">
-
       <header class="top-bar spread">
         <nav class="top-bar-nav">
           <a href="#" class="top-bar-link">
@@ -28,19 +26,14 @@
           <span>Cart (0)</span>
         </a>
       </header>
-
       <div class="splash-container">
         <div class="splash">
           <h1>Splendid Food</h1>
         </div>
       </div>
-
       <main class="wrapper">
-
         <h2>Recommended</h2>
-
         <div class="recommended">
-
           <div class="card">
             <div class="card-title">
               Carrots
@@ -69,7 +62,7 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" value="0">
+                    <input type="number" v-model="inventory.carrots">
                   </div>
                 </div>
               </form>
@@ -78,7 +71,6 @@
               <button class="btn btn-light">Add to cart</button>
             </div>
           </div>
-
           <div class="card">
             <div class="card-title">
               Pineapples
@@ -107,7 +99,7 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" value="0">
+                    <input type="number" v-model="inventory.pineapples">
                   </div>
                 </div>
               </form>
@@ -116,7 +108,6 @@
               <button class="btn btn-light">Add to cart</button>
             </div>
           </div>
-
           <div class="card">
             <div class="card-title">
               Cherries
@@ -145,7 +136,7 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" value="0">
+                    <input type="number" v-model="inventory.cherries">
                   </div>
                 </div>
               </form>
@@ -154,16 +145,27 @@
               <button class="btn btn-light">Add to cart</button>
             </div>
           </div>
-
         </div>
-
       </main>
-
       <footer>
       </footer>
-
     </div>
-      
+    <!-- Vue.js CDN -->  
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      let app = Vue.createApp({
+        data() {
+          return {
+            inventory: {
+              carrots: 0,
+              pineapples: 0,
+              cherries: 0 
+            }
+          }
+        }
+      })
+
+      app.mount('#app')
     </script>
   </body>
 </html>
