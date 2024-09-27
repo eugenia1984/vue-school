@@ -64,10 +64,28 @@
       app.component('login-form', {
         template: `
           <div class="login-form">
-            <input type="email" />
-            <input type="password" />
+            <form @submit.prevent="handleSubmit" >
+              <h2>{{ title }}</h2>
+              <label for="email">E-mail:</label>
+              <input id="email" type="email" v-model="email" required />
+              <label for="password">Password:</label>
+              <input id="password" type="password" v-model="password" required />
+              <button>Log in</button>
+            </form>
           </div>
-        `
+        `,
+        data() {
+          return {
+            title: 'Login form',
+            email: '',
+            password: ''
+          }
+        },
+        methods: {
+          handleSubmit() {
+            console.log('Submitted', this.email, this.password)
+          }
+        }
       });
 
       app.mount("#app");

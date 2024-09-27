@@ -27,6 +27,8 @@ In order ti use Vue.js from CDN, add: `<script src="https://unpkg.com/vue@3/dist
 
 - `@keyup.enter`: `enter` it's a modifier, it will happend when the `key up` AND `enter` happend at the same time.
 
+- `@submit.prevent`: in order to **submit** a `form`.
+
 ## Components
 
 ---
