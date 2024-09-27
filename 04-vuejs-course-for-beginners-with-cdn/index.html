@@ -44,7 +44,7 @@
         <login-form />
       </section>
     </div>
-    <!-- Vuejs CDN -->
+    <!-- Vue. js CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
       const { createApp, ref } = Vue;
@@ -76,8 +76,13 @@
           <div class="login-form">
             <form @submit.prevent="handleSubmit" >
               <h2>{{ title }}</h2>
-              <custom-input v-model="email" :label="emailLabel" type="email" />
-              <custom-input v-model="password" :label="passwordLabel" type="password" />
+              <custom-input 
+                v-for="(input, index) in inputs"
+                v-model="input.value" 
+                :label="input.label" 
+                :type="input.type" 
+                :key="index"
+              />
               <button>Log in</button>
             </form>
           </div>
@@ -86,15 +91,23 @@
         data() {
           return {
             title: 'Login form',
-            email: '',
-            password: '',
-            emailLabel: 'e-mail',
-            passwordLabel: 'password'
+            inputs: [
+              {
+                label: 'email',
+                value: '',
+                type: 'email'
+              },
+              {
+                label: 'password',
+                value: '',
+                type: 'password'
+              }
+            ]
           }
         },
         methods: {
           handleSubmit() {
-            console.log('Submitted', this.email, this.password)
+            console.log('Submitted', this.inputs[0].value, this.inputs[1].value)
           }
         }
       });
@@ -102,9 +115,9 @@
       app.component('custom-input', {
         template: `
           <label :for="label">{{ label }} :</label>
-          <input :id="label" v-model="inputValue" required />
+          <input :id="label" v-model="inputValue" :type="type" required />
         `,
-        props: ['label', 'modelValue'],
+        props: ['label', 'type', 'modelValue'],
         computed: {
           inputValue: {
             get() {
