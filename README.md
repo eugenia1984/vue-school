@@ -40,6 +40,8 @@ Creating a to-do app to see all this concepts.
 
 5. **05 - Food App** from the same course [Vue.js Course for Beginners ](https://www.youtube.com/watch?v=FXpIoQ_rT_c&t=6s), part 2, creating a food app
 
+7. **07 - Rick and Morty App**
+
 ---
 
 ## TECHNOLOGIES:
