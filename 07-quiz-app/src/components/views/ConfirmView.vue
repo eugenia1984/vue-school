@@ -4,7 +4,7 @@
     <div class="viewer py-3 text-center">
       {{ question }}
     </div>
-    <div class="animate__animated animate__bounceIn">
+    <div class="animate__animated animate__bounceIn animate__delay-1s">
       <hr />
       <button 
         @click="goNext"

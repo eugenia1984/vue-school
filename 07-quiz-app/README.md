@@ -1,6 +1,14 @@
 # 07-quiz-app
 
-A little quiz app tp practice Vue.js
+A little quiz app tp practice Vue.js, where I saw:
+
+```
+- components
+- transition
+- props
+- methods
+- emit
+```
 
 ---
 
