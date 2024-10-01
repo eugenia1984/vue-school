@@ -41,6 +41,8 @@ export default {
         this.error = true;
       } else {
         this.error = false;
+        this.$emit('goto', 1);
+        this.$emit('question', this.question);
       }
     }
   }

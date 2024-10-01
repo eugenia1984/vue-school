@@ -1,5 +1,5 @@
 <template>
-  <h1>Confirm</h1>
+  <h1>Your question is:</h1>
 </template>
 
 <script>
