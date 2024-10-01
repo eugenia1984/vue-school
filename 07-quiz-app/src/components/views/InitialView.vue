@@ -12,7 +12,7 @@
       <button 
         v-if="question"
         @click="handleNext"
-        class="btn text-uppercase fw-bold py-2 rounded-pill rounded-2"
+        class="btn animate__animated animate__fadeIn text-uppercase fw-bold py-2 rounded-pill rounded-2"
       >
         Next
       </button>
