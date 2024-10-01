@@ -25,12 +25,15 @@
 <script>
 export default {
   props: ['result'],
+  mounted() {
+    this.getResult();
+  },
   methods: {
     startOver() {
-
+      this.$emit('startOver')
     },
     getResult() {
-      
+      this.$emit('showResult');
     }
   }
 }

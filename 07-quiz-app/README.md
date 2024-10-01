@@ -8,6 +8,7 @@ A little quiz app tp practice Vue.js, where I saw:
 - props
 - methods
 - emit
+- lifecycle hook: mounted
 ```
 
 ---
