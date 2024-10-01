@@ -13,6 +13,24 @@ A little quiz app tp practice Vue.js, where I saw:
 
 ---
 
+## Technologies:
+
+- HTML5
+
+- CSS3
+
+- Bootstrap
+
+- AnimateCSS
+
+- JavaScript
+
+- Vue.js
+
+- vue cli
+
+---
+
 ## Commands:
 
 - Project setup

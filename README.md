@@ -40,7 +40,16 @@ Creating a to-do app to see all this concepts.
 
 5. **05 - Food App** from the same course [Vue.js Course for Beginners ](https://www.youtube.com/watch?v=FXpIoQ_rT_c&t=6s), part 2, creating a food app
 
-7. **07 - Quiz app**
+7. **07 - Quiz app**: a little quiz app tp practice Vue.js, where I saw:
+
+```
+- components
+- transition
+- props
+- methods
+- emit
+- lifecycle hook: mounted
+```
 
 ![image](https://github.com/user-attachments/assets/da67d00d-584a-484c-be1e-3e67fb5b6e82)
 
