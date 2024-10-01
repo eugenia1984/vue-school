@@ -42,6 +42,12 @@ Creating a to-do app to see all this concepts.
 
 7. **07 - Quiz app**
 
+![image](https://github.com/user-attachments/assets/da67d00d-584a-484c-be1e-3e67fb5b6e82)
+
+![image](https://github.com/user-attachments/assets/b575e65d-cfb4-4720-ac6e-3e719a8ed387)
+ 
+![image](https://github.com/user-attachments/assets/2b79ec77-85cd-4009-9256-b412abb308ea)
+
 ---
 
 ## TECHNOLOGIES:
@@ -50,6 +56,10 @@ Creating a to-do app to see all this concepts.
 
 - CSS3
 
+- Bootstrap
+
+- AnimateCSS
+- 
 - JavaScript
 
 - axios
