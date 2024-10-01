@@ -68,7 +68,7 @@ Creating a to-do app to see all this concepts.
 - Bootstrap
 
 - AnimateCSS
-- 
+
 - JavaScript
 
 - axios
