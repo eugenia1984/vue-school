@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Ask a question</h1>
+    <h1 class="mb-5">Ask a question</h1>
     <div class="mb-3">
       <input 
         name="question"
