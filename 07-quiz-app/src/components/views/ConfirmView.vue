@@ -1,5 +1,5 @@
 <template>
-  confirm
+  <h1>Confirm</h1>
 </template>
 
 <script>

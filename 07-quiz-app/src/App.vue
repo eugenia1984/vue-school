@@ -1,5 +1,9 @@
 <template>
-  <InitialView />
+  <div class="container">
+    <component 
+      :is="screens[position]"
+    />
+  </div>
 </template>
 
 <script>
@@ -13,6 +17,16 @@ export default {
     InitialView,
     ConfirmView,
     ResultView
+  },
+  data() {
+    return {
+      screens: [
+        'InitialView',
+        'ConfirmView',
+        'ResultView'
+      ],
+      position: 0
+    }
   }
 }
 </script>
