@@ -77,6 +77,8 @@ Creating a to-do app to see all this concepts.
 
 - VUE.js
 
+- Vue toaster
+
 - Git
 
 ---
