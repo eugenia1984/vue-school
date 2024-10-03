@@ -2,9 +2,11 @@
 
 Here you will find my Vue.js practices with [vueschool.io](https://vueschool.io/courses/) and some videos of **Fernando Herrera**.
 
+
 ---
 
 ## What you can find?
+
 
 1. The **01 - Vue.js Fundamentals with the Composition API course** covers:
 
