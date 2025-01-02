@@ -106,3 +106,7 @@ npm run dev
 ```
 
 ---
+
+## Notes
+
+I appreciate your interest in this repository ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me on [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
